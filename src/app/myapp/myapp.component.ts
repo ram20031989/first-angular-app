@@ -7,29 +7,30 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./myapp.component.css']
 })
 
-export class MyappComponent implements OnInit {  
-  firstname:string;
-  peoplelist:Object[];
-  bindingtext:string;
+export class MyappComponent implements OnInit {
+  color: string;
+  firstname: string;
+  peoplelist: Object[];
+  bindingtext: string;
 
-  constructor() {         
+  constructor() {
     this.bindingtext = "#FFFFFF";
     this.firstname = "Ram";
     this.peoplelist = [
       {
-        firstname:"Steve",
-        company:"Apple",
-        hide:true
+        firstname: "Steve",
+        company: "Apple",
+        hide: true
       },
       {
-        firstname:"Elon",
-        company:"Tesla",
-        hide:true
+        firstname: "Elon",
+        company: "Tesla",
+        hide: true
       },
       {
-        firstname:"Mark",
-        company:"Facebook",
-        hide:true
+        firstname: "Mark",
+        company: "Facebook",
+        hide: true
       }
     ];
   }
