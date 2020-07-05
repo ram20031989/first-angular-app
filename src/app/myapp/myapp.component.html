@@ -1,0 +1,58 @@
+<style>
+    td,
+    th {
+        border: 1px solid green;
+        text-align: center;
+        padding: 8px;
+    }
+</style>
+<div class="center">
+    <h1>{{firstname}}'s Contact Table</h1>
+</div>
+<div>
+    <table style="color:black;">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>BMW</td>
+            <td>Jurgen</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Ferrari</td>
+            <td>Mario</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>Steve</td>
+            <td>USA</td>
+        </tr>
+    </table>
+</div>
+<div *ngIf=peoplelist style="padding-top: 5%;">
+    <table style="color:black;">
+        <tr>
+            <th>First name</th>
+            <th>Company</th>
+            <th>Toggle</th>
+        </tr>
+        <tr *ngFor="let people of peoplelist">
+            <td>{{people.firstname}}</td>
+            <td>
+                <div [hidden]=!people.hide>{{people.company}}</div>
+            </td>
+            <td><button class="btn btn-primary" (click)="people.hide = !people.hide">Show/Hide</button></td>
+        </tr>
+    </table>
+</div>
+<br/><br/>
+<div class="center">
+    <label>
+        <h1>Enter the background color (HEX) below: </h1><input [(ngModel)]="bindingtext" /> 
+    </label>
+    <h1 style="width:70%;margin-left:15%;margin-right:15%;background-color:{{bindingtext}};">"{{bindingtext}}" is the new background color.</h1>
+</div>
