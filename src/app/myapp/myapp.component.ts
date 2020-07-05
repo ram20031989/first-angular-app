@@ -11,10 +11,10 @@ export class MyappComponent implements OnInit {
   color: string;
   firstname: string;
   peoplelist: Object[];
-  bindingtext: string;
-
+  bindingtext: string;  
+  
   constructor() {
-    this.bindingtext = "#FFFFFF";
+    this.bindingtext = "#FFFFFF";    
     this.firstname = "Ram";
     this.peoplelist = [
       {

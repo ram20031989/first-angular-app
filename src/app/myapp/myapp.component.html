@@ -5,6 +5,10 @@
         text-align: center;
         padding: 8px;
     }
+
+    button {
+        padding: 10px;
+    }
 </style>
 <div class="center">
     <h1>{{firstname}}'s Contact Table</h1>
@@ -75,4 +79,4 @@
     <p *ngSwitchCase="'yellow'" style="background-color:{{color}};">Selected color is yellow</p>
     <p *ngSwitchCase="'cyan'" style="background-color:{{color}};">Selected color is cyan</p>
     <p *ngSwitchDefault>No color has been selected</p>
-  </div>
+</div>
