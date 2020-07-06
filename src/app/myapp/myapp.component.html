@@ -72,11 +72,18 @@
         <input type="radio" name="colors" (click)="color='yellow'">Yellow
         <input type="radio" name="colors" (click)="color='cyan'">Cyan
     </div>
-    <p [appHighlight]="color" defaultColor="violet">Highlight me!</p>
+    <p [appHighlight]="color" defaultColor="indianred">Highlight me!</p>
 </div>
 <div class="center" [ngSwitch]="color">
     <p *ngSwitchCase="'lightgreen'" style="background-color:{{color}};">Selected color is lightgreen</p>
     <p *ngSwitchCase="'yellow'" style="background-color:{{color}};">Selected color is yellow</p>
     <p *ngSwitchCase="'cyan'" style="background-color:{{color}};">Selected color is cyan</p>
     <p *ngSwitchDefault>No color has been selected</p>
+</div>
+<br />
+<div class="center">
+    <app-hello (touch)="respond()" name="{{ name }}" [hcolor]="hcolor"></app-hello>
+    <p>{{response}}</p>
+    <p>{{hcolor}}</p>
+    <app-cb (colorChange)="changeColor($event)"></app-cb>
 </div>

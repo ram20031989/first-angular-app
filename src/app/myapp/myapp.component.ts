@@ -7,13 +7,18 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./myapp.component.css']
 })
 
-export class MyappComponent implements OnInit {
-  color: string;
+export class MyappComponent {
+
+  name = 'Angular 6';
+  response = 'Nothing';
+  hcolor = 'maroon';
+  bcolor = 'green';
   firstname: string;
+  color: string;
   peoplelist: Object[];
   bindingtext: string;  
-  
-  constructor() {
+
+  constructor() {    
     this.bindingtext = "#FFFFFF";    
     this.firstname = "Ram";
     this.peoplelist = [
@@ -35,7 +40,12 @@ export class MyappComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {
+  respond() {
+    this.response = 'Success';
+  }
+
+  changeColor(color) {
+    this.bcolor = color;
   }
 
 }
